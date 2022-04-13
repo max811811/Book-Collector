@@ -5,6 +5,7 @@
 
 {% for book in books %}
     <div class="card">
+      <a href="{% url 'details' book.id %}">
         <div class="card-content">
             <span class="card-title">{{ book.name }}</cat></span>
             <p>Breed: {{ book.breed }}</p>
@@ -15,6 +16,7 @@
                 <p>Age: 0</p>
             {% endif %}
         </div>
+      </a>
     </div>
 {% endfor %}
 
